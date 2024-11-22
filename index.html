@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Quality Monitoring Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header class="header">
+      <h1 class="title">Water Quality Monitoring Dashboard</h1>
+      <p class="subtitle">Monitor and analyze real-time water quality data.</p>
+      <p class="last-updated" id="last-updated">Last Updated: Loading...</p>
+    </header>
+
+    <!-- Real-Time Data Overview -->
+    <div class="overview">
+      <div class="metric">
+        <h3>pH</h3>
+        <p id="current-ph" class="value">Loading...</p>
+      </div>
+      <div class="metric">
+        <h3>Turbidity</h3>
+        <p id="current-turbidity" class="value">Loading...</p>
+      </div>
+      <div class="metric">
+        <h3>Conductivity</h3>
+        <p id="current-conductivity" class="value">Loading...</p>
+      </div>
+      <div class="metric suitability">
+        <h3>Suitability</h3>
+        <p id="current-suitability" class="value">Loading...</p>
+      </div>
+    </div>
+
+    <!-- Trend Charts Section -->
+    <div class="chart-section">
+      <h3 class="section-title">Water Quality Trends</h3>
+      <canvas id="waterChart"></canvas>
+    </div>
+
+    <!-- Data List Section -->
+    <div class="data-section">
+      <h3 class="section-title">Recent Readings</h3>
+      <ul class="data-list" id="data-list">
+        <!-- Dynamic list items will be added here -->
+      </ul>
+    </div>
+
+    <!-- Suitability Message -->
+    <div class="suitability-message" id="suitability-message">
+      Loading water quality data...
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
